@@ -3,26 +3,43 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  Header() {
+    return (
+      <div className="jumbotron">
+        <h1>Edit SQL</h1>
+      </div>);
+  }
+  SqlBox() {
+    return (
+      <div>
+        <textarea className="form-control" name="sql"></textarea>
+      </div>
+    )
+  }
+  Parameters(){
+    return (
+      <table></table>
+    )
+  }
+  Result(){
+    return (
+      <textarea className="form-control" name="result"></textarea>
+    )
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <this.Header></this.Header>
+        SQL
+        <this.SqlBox></this.SqlBox>
+        <div>SQL Parameters</div>
+        <this.Parameters></this.Parameters>
+        <div>Results</div>
+        <this.Result></this.Result>
       </div>
     );
   }
+
 }
 
 export default App;
