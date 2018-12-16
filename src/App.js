@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-const box = {
-  overflowY: "auto",
-  maxHeight: "500px",
-  minHeight: "300px"
-};
+import SqlEditor from "./components/sqlEditor";
+
+
 class App extends Component {
   Header() {
     return (
@@ -14,30 +11,7 @@ class App extends Component {
       </div>
     );
   }
-  SqlBox() {
-    return (
-      <div>
-        <textarea rows="15" placeHolder="Your sql here..." wrap="true" className="form-control" name="sql" />
-      </div>
-    );
-  }
-  Parameters() {
-    return (
-      <div>
-        <table className="table">
-          <thead>
-            <th>Parameter</th>
-            <th>Value</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>No parameters found</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    );
-  }
+  
   Footer() {
     return (
       <footer className="bd-footer text-muted">
@@ -50,14 +24,7 @@ class App extends Component {
       <div className="App">
         <this.Header />
         <div className="container">
-          <div className="row" style={box}>
-            <div className="col-6">
-              <this.SqlBox />
-            </div>
-            <div className="col-6">
-              <this.Parameters />
-            </div>
-          </div>
+            <SqlEditor></SqlEditor>
         </div>
         <this.Footer />
       </div>
