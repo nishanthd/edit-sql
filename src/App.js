@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import SqlEditor from "./components/sqlEditor";
+import SqlEditor from "./components/sql-editor";
 
 
 class App extends Component {
