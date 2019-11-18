@@ -7,6 +7,7 @@ const box = {
   maxHeight: "500px",
   minHeight: "300px"
 };
+
 class SqlEditor extends Component {
   state = {
     sql: "",
@@ -22,7 +23,7 @@ class SqlEditor extends Component {
       };
       let response;
       var self = this;
-      fetch("http://127.0.0.1:5000/sql/parse", {
+      fetch("http://35.188.117.88:5000/query/parse", {
         method: "POST",
         headers: {
           Accept: "application/json",
